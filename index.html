@@ -11,7 +11,7 @@ function computerPlay() {
   const items = ["rock","paper","scissors"];
   return items[Math.floor(Math.random() * 3)];
 }
-    //Prompt player to select, log and return results of play
+    //Prompt player to select. Log and return results of play
 function playRound(playerSelection, computerSelection) {
   playerSelection = prompt('rock, paper or scissors?').toUpperCase();
   computerSelection = computerPlay().toUpperCase();
