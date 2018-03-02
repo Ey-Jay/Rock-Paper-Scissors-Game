@@ -39,13 +39,13 @@ let computerScore = 0;
 
 for (var i = 0; i < rounds; i++) {
   let results = playRound();
-  if (results == 1){playerScore++;};
-  if (results == -1){computerScore++;};
+  if (results == 1){playerScore++;}
+  if (results == -1){computerScore++;}
   console.log("player: " + playerScore + " computer: " + computerScore);
 }
-if (playerScore < computerScore){console.log("Game Over! You lost!");};
-if (playerScore > computerScore){console.log("Congratulations! You won!");};
-if (playerScore == computerScore){console.log("It\'s a tie! Try again.");};
+if (playerScore < computerScore){console.log("Game Over! You lost!");}
+if (playerScore > computerScore){console.log("Congratulations! You won!");}
+if (playerScore == computerScore){console.log("It\'s a tie! Try again.");}
 }
 
 gamePlay();
