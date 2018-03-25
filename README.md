@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors-Game
-Short game of rock, paper, or scissors against the computer.
+Short game of rock, paper, scissors against the computer.
+Developed as an Odin Project exercise.
 
-Currently it is only possible to play it in the browser console.
-
-Soon the UI will be developed.
+It started as a browser-console-only game,
+but now the GUI is finally done.
