@@ -1,0 +1,172 @@
+html{
+  background: #020202;
+  height: 100%;
+}
+
+body{
+  margin: 0px;
+}
+
+button{
+  border: none;
+}
+
+span{
+  font-size: .7em;
+  /* float: right; */
+  display: inline;
+}
+button:hover{
+  background-color: #3B6F73;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+button:focus{
+  outline: 0;
+}
+button:active{
+  transform: scale(0.8);
+  transition-duration: 0.03s;
+}
+
+.description {
+  font-family: 'Cutive Mono', monospace;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.pageTitle{
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5em;
+  color: #CCA43B;
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+.descriptionBox{
+  width: 50%;
+  margin: auto auto;
+  margin-bottom: 10px;
+}
+
+.restart{
+  background-color: #709699;
+  border-radius: 20%;
+  height: auto;
+  width: auto;
+}
+
+.rock{
+  background-image: url('/images/noun_88661_cc.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #709699;
+  border-radius: 40%;
+  height: 8em;
+  width: 8em;
+  margin: 0px 20px 0px 20px;
+  transform: rotate(90deg);
+}
+
+.paper{
+  background-image: url('/images/noun_88662_cc.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 65%;
+  background-color: #709699;
+  border-radius: 40%;
+  height: 8em;
+  width: 8em;
+  margin: 0px 20px 0px 20px;
+  transform: rotate(90deg);
+}
+
+.scissor{
+  background-image: url('/images/noun_88666_cc.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 65%;
+  background-color: #709699;
+  border-radius: 40%;
+  height: 8em;
+  width: 8em;
+  margin: 0px 20px 0px 20px;
+  transform: rotate(90deg);
+}
+
+.buttons{
+  text-align: center;
+  position: fixed;
+  bottom: 15vh;
+  width: 100%;
+}
+
+.restartButton{
+  text-align: center;
+  position: fixed;
+  bottom: 15vh;
+  width: 100%;
+}
+
+.scores{
+  text-align: center;
+
+}
+
+.player{
+  height: auto;
+  width: 40%;
+  display: inline-block;
+  border-right: 1px solid white;
+  font-family: 'Cutive Mono', monospace;
+  text-align: center;
+  text-decoration: underline;
+  color: #e0e0e0;
+  margin: 0px
+
+}
+.computer{
+  height: auto;
+  width: 40%;
+  display: inline-block;
+  border-left: 1px solid white;
+  font-family: 'Cutive Mono', monospace;
+  text-align: center;
+  text-decoration: underline;
+  color: #e0e0e0;
+}
+
+footer{
+  color: white;
+  font-family: 'Cutive Mono', monospace;
+  text-align: center;
+  background: #826926;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: .9em;
+}
+
+@media screen and (max-width: 740px) {
+    .rock, .paper, .scissor{
+      height: 5em;
+      width: 5em;
+    }
+
+    .pageTitle{
+      font-size: 3em;
+    }
+}
+
+.rounds{
+  color: white;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.2em;
+}
+
+.finalResult{
+  font-family: 'Cutive Mono', monospace;
+  font-size: 2em;
+}

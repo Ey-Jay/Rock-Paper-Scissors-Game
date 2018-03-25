@@ -2,58 +2,50 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-
-    <script>
-
-    //Generate a random selection for computer
-function computerPlay() {
-  const items = ["rock","paper","scissors"];
-  return items[Math.floor(Math.random() * 3)];
-}
-    //Prompt player to select. Log and return results of play
-function playRound(playerSelection, computerSelection) {
-  playerSelection = prompt('rock, paper or scissors?').toUpperCase();
-  computerSelection = computerPlay().toUpperCase();
-
-  if(playerSelection === "ROCK" && computerSelection === "ROCK" ||
-     playerSelection === "PAPER" && computerSelection === "PAPER" ||
-     playerSelection === "SCISSORS" && computerSelection === "SCISSORS"){
-       console.log("It\'s a tie." + " Computer selected: " + computerSelection +
-          ", and you selected: " + playerSelection);
-
-     }else if(playerSelection === "ROCK" && computerSelection === "PAPER" ||
-              playerSelection === "PAPER" && computerSelection === "SCISSORS" ||
-              playerSelection === "SCISSORS" && computerSelection === "ROCK"){
-                console.log("You lose! " + computerSelection + " beats " + playerSelection); return -1;
-
-          }else{
-            console.log("You win! " + playerSelection + " beats " + computerSelection); return 1;
-          }
-}
-    //create loop for 5 rounds of play, call playRound function, add results together, and declare winner/loser.
-function gamePlay() {
-const rounds = 5;
-let playerScore = 0;
-let computerScore = 0;
-
-for (var i = 0; i < rounds; i++) {
-  let results = playRound();
-  if (results == 1){playerScore++;}
-  if (results == -1){computerScore++;}
-  console.log("player: " + playerScore + " computer: " + computerScore);
-}
-if (playerScore < computerScore){console.log("Game Over! You lost!");}
-if (playerScore > computerScore){console.log("Congratulations! You won!");}
-if (playerScore == computerScore){console.log("It\'s a tie! Try again.");}
-}
-
-gamePlay();
-
-    </script>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="javascript" type="text/javascript" href="main.js">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
   </head>
-  <body>
 
+  <body>
+    <h1 class="pageTitle">Rock Paper Scissors</h1>
+    <div class="descriptionBox">
+      <p class="description">
+        SCISSORS beats PAPER beats ROCK beats SCISSORS
+        <br>
+        >best of 5 wins<
+      </p>
+    </div>
+
+    <div class="scores">
+      <div class="player">
+        <h2>PLAYER<span class="playerScore" style="text-decoration: none; font-size:1.6em;"></span></h2>
+        <img class="playerSelection" style="width: 100px; height: 100px; transform: rotate(90deg)" src="images/rock_white.svg">
+      </div>
+      <div class="computer">
+        <h2>COMPUTER<span class="computerScore" style="text-decoration: none; font-size:1.6em;"></span></h2>
+        <img class="computerSelection" style="width: 100px; height: 100px; transform: rotate(90deg) scaleY(-1);" src="images/rock_white.svg">
+      </div>
+      <h3 class="rounds"></h3>
+      <h3 class="rounds result" style="text-transform: uppercase; color: #CCA43B;"></h3>
+      <h3 class="finalResult" style="text-transform: uppercase;"></h3>
+    </div>
+
+    <div class="buttons">
+      <button class ="rock" type="button" name="button"></button>
+      <button class ="paper" type="button" name="button"></button>
+      <button class ="scissor" type="button" name="button"></button>
+    </div>
+    <div class="restartButton">
+    </div>
+
+    <footer>
+      <p>Developed by Erick R. Jansen as an Odin Project exercise.<br>
+        <span>rock,paper & scissor icons by Studio Fibonacci from the Noun Project</span>
+      </p>
+    </footer>
   </body>
+  <script src="main.js" charset="utf-8"></script>
 </html>
