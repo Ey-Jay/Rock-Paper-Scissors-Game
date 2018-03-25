@@ -59,7 +59,7 @@ button:active{
 }
 
 .rock{
-  background-image: url('/images/noun_88661_cc.svg');
+  background-image: url('images/rock_black.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-color: #709699;
@@ -71,7 +71,7 @@ button:active{
 }
 
 .paper{
-  background-image: url('/images/noun_88662_cc.svg');
+  background-image: url('images/paper_black.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 65%;
@@ -84,7 +84,7 @@ button:active{
 }
 
 .scissor{
-  background-image: url('/images/noun_88666_cc.svg');
+  background-image: url('images/scissors_black.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 65%;
