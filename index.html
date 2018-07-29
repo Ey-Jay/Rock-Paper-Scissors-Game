@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
-  </head>
+<html lang="en">
 
-  <body>
-    <h1 class="pageTitle">Rock Paper Scissors</h1>
-    <div class="descriptionBox">
-      <p class="description">
-        SCISSORS beats PAPER beats ROCK beats SCISSORS
-        <br>
-        >best of 5 wins<
-      </p>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
-    <div class="scores">
-      <div class="player">
-        <h2>PLAYER<span class="playerScore" style="text-decoration: none; font-size:1.6em;"></span></h2>
-        <img class="playerSelection" style="width: 100px; height: 100px; transform: rotate(90deg)" src="images/rock_white.svg">
-      </div>
-      <div class="computer">
-        <h2>COMPUTER<span class="computerScore" style="text-decoration: none; font-size:1.6em;"></span></h2>
-        <img class="computerSelection" style="width: 100px; height: 100px; transform: rotate(90deg) scaleY(-1);" src="images/rock_white.svg">
-      </div>
-      <h3 class="rounds"></h3>
-      <h3 class="rounds result" style="text-transform: uppercase; color: #CCA43B;"></h3>
-      <h3 class="finalResult" style="text-transform: uppercase;"></h3>
+<body>
+  <header>
+    <h1 class="page-title">Rock Paper Scissors</h1>
+    <p class="description">
+      SCISSORS beats PAPER beats ROCK beats SCISSORS
+      <br class="line-break"> >best of 5 wins
+      < </p>
+  </header>
+  <section class="play-container">
+    <div class="play-box">
+      <h2>Player
+        <span class="player-score"></span>
+      </h2>
+      <img class="player-selection" src="images/rock_white.svg">
     </div>
-
-    <div class="buttons">
-      <button class ="rock" type="button" name="button"></button>
-      <button class ="paper" type="button" name="button"></button>
-      <button class ="scissor" type="button" name="button"></button>
+    <div class="vertical-line"></div>
+    <div class="play-box">
+      <h2>Computer
+        <span class="computer-score"></span>
+      </h2>
+      <img class="computer-selection" src="images/rock_white.svg">
     </div>
-    <div class="restartButton">
-    </div>
-
-    <footer>
-      <p>Developed by Erick R. Jansen as an Odin Project exercise.<br>
-        <span>rock,paper & scissor icons by Studio Fibonacci from the Noun Project</span>
-      </p>
-    </footer>
-  </body>
+  </section>
+  <section class="results">
+    <p class="rounds"></p>
+    <p class="rounds-result"></p>
+    <p class="final-result"></p>
+  </section>
+  <section class="selection-buttons">
+    <button class="rock" type="button" name="rock"></button>
+    <button class="paper" type="button" name="paper"></button>
+    <button class="scissor" type="button" name="scissor"></button>
+  </section>
+  <div class="reset">
+    <button class="restart-button"></button>
+  </div>
+  <footer>
+    <p>
+      Developed by Erick R. Jansen as an Odin Project exercise.
+      <span class="small-text">rock,paper & scissor icons by Studio Fibonacci from the Noun Project</span>
+    </p>
+  </footer>
   <script src="main.js" charset="utf-8"></script>
+</body>
+
 </html>

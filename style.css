@@ -1,20 +1,98 @@
-html{
-  background: #020202;
-  height: 100%;
+/* mini css reset */
+html, body, p, h1, h2 {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-  margin: 0px;
+body {
+  background-color: black;
+  font-family: 'Cutive Mono', monospace;
+  color: #e0e0e0;
 }
 
-button{
+/* header 
+------------------------------------------
+*/
+.page-title {
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4em;
+  color: #CCA43B;
+}
+
+.description {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* 
+middle area
+-------------------------------------------- 
+*/
+.play-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.play-box {
+  margin: 20px;
+  width: 150px;
+  text-align: center;
+}
+
+.vertical-line {
+  width: 0.5%;
+  margin: 20px 100px;
+  background-color: white;
+}
+
+img {
+  height: auto;
+  width: 50%;
+}
+
+img.player-selection {
+  transform: rotate(90deg);
+}
+
+img.computer-selection {
+  transform: rotate(90deg) scaleY(-1);
+}
+
+/* results text styling  */
+
+.results {
+  text-align: center;
+}
+
+.rounds {
+  margin-bottom: 10px;
+}
+
+.rounds-result, .final-result {
+  text-transform: uppercase;
+}
+
+.final-result {
+  font-size: 1.3em;
+}
+
+.rounds-result {
+  color: #CCA43B;
+}
+
+/* buttons */
+.selection-buttons, .reset{
+  text-align: center;
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+}
+
+button {
   border: none;
-}
-
-span{
-  font-size: .7em;
-  /* float: right; */
-  display: inline;
 }
 button:hover{
   background-color: #3B6F73;
@@ -29,144 +107,104 @@ button:active{
   transition-duration: 0.03s;
 }
 
-.description {
-  font-family: 'Cutive Mono', monospace;
-  text-align: center;
-  color: #e0e0e0;
-}
-
-.pageTitle{
-  font-family: 'VT323', monospace;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 5em;
-  color: #CCA43B;
-  margin-top: 10px;
-  margin-bottom: 1px;
-}
-
-.descriptionBox{
-  width: 50%;
-  margin: auto auto;
-  margin-bottom: 10px;
-}
-
-.restart{
-  background-color: #709699;
-  border-radius: 20%;
-  height: auto;
-  width: auto;
-}
-
-.rock{
+/* button background icons */
+.rock {
   background-image: url('images/rock_black.svg');
-  background-repeat: no-repeat;
   background-position: center;
-  background-color: #709699;
-  border-radius: 40%;
-  height: 8em;
-  width: 8em;
-  margin: 0px 20px 0px 20px;
-  transform: rotate(90deg);
 }
 
 .paper{
   background-image: url('images/paper_black.svg');
-  background-repeat: no-repeat;
-  background-position: bottom center;
   background-size: 65%;
-  background-color: #709699;
-  border-radius: 40%;
-  height: 8em;
-  width: 8em;
-  margin: 0px 20px 0px 20px;
-  transform: rotate(90deg);
+  background-position: bottom center;
 }
 
 .scissor{
   background-image: url('images/scissors_black.svg');
-  background-repeat: no-repeat;
-  background-position: bottom center;
   background-size: 65%;
+  background-position: bottom center;
+}
+
+.rock, 
+.paper,
+.scissor{
+  background-repeat: no-repeat;
   background-color: #709699;
   border-radius: 40%;
   height: 8em;
   width: 8em;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 20px 20px 0px;
   transform: rotate(90deg);
 }
 
-.buttons{
+/* restart button styling */
+
+.restart-button{
+  display: none;
+  background-color: #709699;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1.5em;
+  width: 30%;
+}
+
+
+
+/* 
+Footer 
+--------------------------------------------
+*/
+
+.small-text {
+  font-size: .7em;
+  display: block;
   text-align: center;
-  position: fixed;
-  bottom: 15vh;
+  margin-top: 5px;
+}
+
+footer {
+  padding: 10px;
   width: 100%;
-}
-
-.restartButton{
-  text-align: center;
-  position: fixed;
-  bottom: 15vh;
-  width: 100%;
-}
-
-.scores{
-  text-align: center;
-
-}
-
-.player{
-  height: auto;
-  width: 40%;
-  display: inline-block;
-  border-right: 1px solid white;
-  font-family: 'Cutive Mono', monospace;
-  text-align: center;
-  text-decoration: underline;
-  color: #e0e0e0;
-  margin: 0px
-
-}
-.computer{
-  height: auto;
-  width: 40%;
-  display: inline-block;
-  border-left: 1px solid white;
-  font-family: 'Cutive Mono', monospace;
-  text-align: center;
-  text-decoration: underline;
-  color: #e0e0e0;
-}
-
-footer{
+  background: #826926;
   color: white;
   font-family: 'Cutive Mono', monospace;
+  font-size: .9em;
   text-align: center;
-  background: #826926;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  font-size: .9em;
 }
 
-@media screen and (max-width: 740px) {
-    .rock, .paper, .scissor{
-      height: 5em;
-      width: 5em;
-    }
+/* 
+Media Queries
+----------------------------------------------
+*/
 
-    .pageTitle{
-      font-size: 3em;
-    }
-}
+@media (max-width: 700px) {
+  .page-title {
+    font-size: 2.5em;
+  }
+  
+  .vertical-line {
+    margin: 20px 20px;
+  }
 
-.rounds{
-  color: white;
-  font-family: 'Cutive Mono', monospace;
-  font-size: 1.2em;
-}
+  .play-box {
+    font-size: 80%;
+  }
 
-.finalResult{
-  font-family: 'Cutive Mono', monospace;
-  font-size: 2em;
+  .rock, 
+  .paper,
+  .scissor {
+    width: 6em;
+    height: 6em;
+  }
+
+  .restart-button {
+    width: initial;
+    font-size: 1em;
+  }
+
+  .description {
+    font-size: .7em;
+  }
 }
