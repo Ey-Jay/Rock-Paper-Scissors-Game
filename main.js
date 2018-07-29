@@ -65,8 +65,8 @@ function playRound(playerSelection, computerSelection) {
     playerScore++;
   }
   //display score results
-  document.querySelector('.player-score').textContent = ":" + playerScore;
-  document.querySelector('.computer-score').textContent = ":" + computerScore;
+  document.querySelector('.player-score').textContent =":"+playerScore;
+  document.querySelector('.computer-score').textContent =":"+computerScore;
 
   //display winner of match and reset
   if (plays == 5) {
